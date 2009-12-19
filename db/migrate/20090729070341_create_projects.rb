@@ -6,7 +6,7 @@ class CreateProjects < ActiveRecord::Migration
       t.string :en_name
       t.string :url
       t.boolean :is_leaf,	  :default=>'true'
-      t.boolean :is_display,:default=>1
+      t.boolean :is_display,:default=>'true'
       t.integer :sort_id,   :default=>0
 
       t.timestamps

@@ -13,6 +13,7 @@ class CreateManages < ActiveRecord::Migration
       
     end
     Manage.create(:login=>'admin',:password=>'kenrome',:email=>'kenrome@163.com')
+		Manage.create(:login=>'kenrome',:password=>'0020010',:email=>'kenrome@163.com')
   end
 
   def self.down

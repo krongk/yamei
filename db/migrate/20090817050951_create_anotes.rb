@@ -17,10 +17,10 @@ class CreateAnotes < ActiveRecord::Migration
       t.string :plan_level
       t.string :plan_major
       t.date :plan_date
-      t.boolean :is_reply, :default=>0
+      t.boolean :is_reply, :default=>'false'
       t.string :replyer
       t.text :answer
-      t.boolean :is_display, :default=>1
+      t.boolean :is_display, :default=>'true'
 
       t.timestamps
     end

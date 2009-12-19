@@ -13,21 +13,21 @@ class CreateItems < ActiveRecord::Migration
       t.text :info
       t.string :metakeywords, :default=>"亚美经济文化"
       t.string :metadesc,			:default=>"亚美经济文化"
-      t.boolean :is_use_templet, :default=>0
+      t.boolean :is_use_templet, :default=>'false'
       t.string :templet
-      t.boolean :is_image,		:default=>0
+      t.boolean :is_image,		:default=>'false'
       t.integer :image_id
       t.string :image_url
       t.integer :visit_count, :default=>0
       t.integer :digg_count,	:default=>0
-      t.boolean :is_comment,	:default=>0
-      t.boolean :is_lock,			:default=>0
-      t.boolean :is_recyle,		:default=>0
-      t.boolean :is_html,			:default=>0
+      t.boolean :is_comment,	:default=>'false'
+      t.boolean :is_lock,			:default=>'false'
+      t.boolean :is_recyle,		:default=>'false'
+      t.boolean :is_html,			:default=>'false'
       t.string :file_path
-      t.boolean :is_vote,			:default=>0
-      t.boolean :is_display,	:default=>1
-      t.boolean :is_list_top, :default=>0
+      t.boolean :is_vote,			:default=>'false'
+      t.boolean :is_display,	:default=>'true'
+      t.boolean :is_list_top, :default=>'false'
       t.integer :sort_id,			:default=>0
 
       t.timestamps

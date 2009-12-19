@@ -42,8 +42,8 @@ class CreateBnotes < ActiveRecord::Migration
       t.string :b_sale
       t.string :b_benefit
       t.text :question
-      t.boolean :is_reply,  :default=>0
-      t.boolean :is_display,  :default=>1
+      t.boolean :is_reply,  :default=>'false'
+      t.boolean :is_display,  :default=>'true'
       t.string :replyer
       t.text :answer
 
