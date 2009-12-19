@@ -1,0 +1,25 @@
+<table>
+  <tr>
+    <th>Table name</th>
+    <th>Parent</th>
+    <th>Title</th>
+    <th>Image</th>
+    <th>Is lock</th>
+    <th>Is display</th>
+  </tr>
+
+<% @photos.each do |photo| %>
+  <tr>
+    <td><%=h photo.table_name %></td>
+    <td><%=h photo.parent_id %></td>
+    <td><%=h photo.title %></td>
+    <td><%=h photo.image %></td>
+    <td><%=h photo.is_lock %></td>
+    <td><%=h photo.is_display %></td>
+    <td><%= link_to 'Showaa', photo_path(photo) %></td>
+		<td><%=link_to 'show',:controller=>'photos',:action=>'show',:id=>photo %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Back', photos_path %>

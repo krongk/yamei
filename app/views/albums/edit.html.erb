@@ -1,0 +1,24 @@
+<h1>编辑新专辑</h1>
+
+<% form_for(@album) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :title,'专辑名称' %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :display,'是否显示' %><br />
+    <%= f.check_box :display %>
+  </p>
+  <p>
+    <%= f.label :sort_id,'排序编号' %><br />
+    <%= f.text_field :sort_id %>*数字越大越排前面
+  </p>
+  <p>
+    <%= f.submit '提 交' %>
+  </p>
+<% end %>
+
+<%= link_to '预览', @album %> |
+<%= link_to '返回', albums_path %>

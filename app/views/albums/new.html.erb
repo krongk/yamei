@@ -1,0 +1,15 @@
+<h1>创建新专辑</h1>
+
+<% form_for(@album) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :title,'专辑名称' %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.submit '提 交' %>
+  </p>
+<% end %>
+
+<%= link_to '返回', albums_path %>

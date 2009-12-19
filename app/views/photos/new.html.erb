@@ -1,0 +1,28 @@
+<h1>添加图片</h1>
+
+<% form_for(@photo,:html=>{:multipart=>true}) do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.hidden_field :table_name %>
+    <%= f.hidden_field :parent_id %>
+  </p>
+  <p>
+    <%= f.label :title,'图片名称' %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :image,'选择地址' %><br />
+    <%# f.file_column_field :image %>
+		<%=file_column_field 'photo','image' %>
+  </p>
+<p>
+    <%= f.label :tag_list,'标签' %><br />
+    <%= f.text_field :tag_list %>*多个以","隔开
+  </p>
+  <p>
+    <%= f.submit '提交' %>
+  </p>
+<% end %>
+
+<%# link_to '返回', photos_path %>
+<A HREF="javascript:history.go(-1)">返回</A>

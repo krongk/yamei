@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  table_name: MyString
+  parent_id: 1
+  title: MyString
+  image: MyString
+  is_lock: false
+  is_display: false
+
+two:
+  table_name: MyString
+  parent_id: 1
+  title: MyString
+  image: MyString
+  is_lock: false
+  is_display: false

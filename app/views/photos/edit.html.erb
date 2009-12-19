@@ -1,0 +1,30 @@
+<h1>编辑图像</h1>
+
+<% form_for(@photo,:html=>{:multipart=>true}) do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.hidden_field :table_name %>
+    <%= f.hidden_field :parent_id %>
+  </p>
+  <p>
+    <%= f.label :title,'图片名称' %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :image,'选择地址' %><br />
+    <%= f.file_field :image %>
+  </p>
+  <p>
+    <%= f.label :is_lock,'是否锁定' %><br />
+    <%= f.check_box :is_lock %>
+  </p>
+  <p>
+    <%= f.label :is_display,'是否显示' %><br />
+    <%= f.check_box :is_display %>
+  </p>
+  <p>
+    <%= f.submit '提交' %>
+  </p>
+<% end %>
+
+<%= link_to '返回', photos_path %>

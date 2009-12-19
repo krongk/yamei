@@ -1,0 +1,184 @@
+# Logfile created on Sat Dec 19 19:42:56 +0800 2009  [4;36;1mSQL (120.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (57.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#home (for 127.0.0.1 at 2009-12-19 19:43:52) [GET]
+  [4;36;1mProject Load (530.0ms)[0m   [0;1mSELECT * FROM `projects` [0m
+  [4;35;1mProject Load (110.0ms)[0m   [0mSELECT * FROM `projects` WHERE (cn_name='最新资讯') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering welcome/home
+  [4;36;1mProject Load (1.0ms)[0m   [0;1mSELECT * FROM `projects` WHERE (cn_name like '留学') ORDER BY created_at DESC[0m
+  [4;35;1mProject Load (1.0ms)[0m   [0mSELECT * FROM `projects` WHERE (cn_name like '留学指南') ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mProject Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `projects`[0m
+  [4;35;1mItem Load (175.0ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.project_id = 28) ORDER BY created_at desc LIMIT 20[0m
+  [4;36;1mItem Columns (11.0ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (3.0ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.project_id = 22) ORDER BY created_at desc LIMIT 20[0m
+  [4;36;1mItem Load (2.0ms)[0m   [0;1mSELECT * FROM `items` WHERE (project_id =25) ORDER BY created_at DESC LIMIT 10[0m
+Rendered welcome/_liuxue (936.0ms)
+  [4;35;1mProject Load (1.0ms)[0m   [0mSELECT * FROM `projects` WHERE (cn_name like '移民') ORDER BY created_at DESC[0m
+  [4;36;1mProject Load (0.0ms)[0m   [0;1mSELECT * FROM `projects` WHERE (cn_name like '移民指南') ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mItem Load (2.0ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.project_id = 29) ORDER BY created_at desc LIMIT 10[0m
+  [4;36;1mItem Load (2.0ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.project_id = 23) ORDER BY created_at desc LIMIT 10[0m
+  [4;35;1mItem Load (2.0ms)[0m   [0mSELECT * FROM `items` WHERE (project_id =26) ORDER BY created_at DESC LIMIT 10[0m
+Rendered welcome/_yimin (23.0ms)
+  [4;36;1mProject Load (1.0ms)[0m   [0;1mSELECT * FROM `projects` WHERE (cn_name like '国际联合办学') ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mProject Load (0.0ms)[0m   [0mSELECT * FROM `projects` WHERE (parent_id = 2) [0m
+  [4;36;1mItem Load (2.0ms)[0m   [0;1mSELECT * FROM `items` WHERE (project_id in (12,13,2)) ORDER BY created_at DESC LIMIT 10[0m
+Rendered welcome/_school (13.0ms)
+  [4;35;1mProject Load (1.0ms)[0m   [0mSELECT * FROM `projects` WHERE (cn_name like '萨省商贸合作') ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mProject Load (0.0ms)[0m   [0;1mSELECT * FROM `projects` WHERE (parent_id = 3) [0m
+  [4;35;1mItem Load (2.0ms)[0m   [0mSELECT * FROM `items` WHERE (project_id in (14,15,16,17,3)) ORDER BY created_at DESC LIMIT 8[0m
+Rendered welcome/_gpc (14.0ms)
+  [4;36;1mProject Load (0.0ms)[0m   [0;1mSELECT * FROM `projects` WHERE (cn_name like '亚美介绍') ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mProject Load (4.0ms)[0m   [0mSELECT * FROM `projects` WHERE (parent_id = 18) [0m
+  [4;36;1mItem Load (2.0ms)[0m   [0;1mSELECT * FROM `items` WHERE (project_id in (18)) ORDER BY created_at DESC LIMIT 10[0m
+Rendered welcome/_yamei (16.0ms)
+Rendered layouts/_search (2.0ms)
+Rendered layouts/_friend_link (3.0ms)
+Rendered layouts/_header (5.0ms)
+  [4;35;1mAlbum Load (37.0ms)[0m   [0mSELECT * FROM `albums` ORDER BY albums.id DESC LIMIT 1[0m
+  [4;36;1mAlbum Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `albums` ORDER BY albums.id DESC LIMIT 1[0m
+  [4;36;1mAlbumPhoto Load (28.0ms)[0m   [0;1mSELECT * FROM `album_photos` WHERE (album_id = 2) ORDER BY created_at desc LIMIT 10[0m
+  [4;35;1mAlbumPhoto Columns (20.0ms)[0m   [0mSHOW FIELDS FROM `album_photos`[0m
+  [4;36;1mPhoto Load (43.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (id =38) LIMIT 1[0m
+  [4;35;1mPhoto Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (id =36) LIMIT 1[0m
+  [4;35;1mAlbum Load (0.0ms)[0m   [0mSELECT * FROM `albums` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `albums` LIMIT 1[0m
+  [4;35;1mAlbumPhoto Load (1.0ms)[0m   [0mSELECT * FROM `album_photos` WHERE (album_id = 1) ORDER BY created_at desc LIMIT 6[0m
+  [4;36;1mPhoto Load (1.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (id =39) LIMIT 1[0m
+  [4;35;1mPhoto Load (1.0ms)[0m   [0mSELECT * FROM `photos` WHERE (id =32) LIMIT 1[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (id =28) LIMIT 1[0m
+  [4;35;1mPhoto Load (1.0ms)[0m   [0mSELECT * FROM `photos` WHERE (id =27) LIMIT 1[0m
+  [4;36;1mPhoto Load (1.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (id =26) LIMIT 1[0m
+  [4;35;1mPhoto Load (1.0ms)[0m   [0mSELECT * FROM `photos` WHERE (id =25) LIMIT 1[0m
+Rendered layouts/_sidebar (9368.0ms)
+Rendered layouts/_footer (4.0ms)
+Completed in 11335ms (View: 10253, DB: 1188) | 200 OK [http://127.0.0.1/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-19 19:44:05) [GET]
+
+ActionController::RoutingError (No route matches "/photo/image/36/small/aaaaaaaa1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-19 19:44:05) [GET]
+
+ActionController::RoutingError (No route matches "/photo/image/38/small/mgdt.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-19 19:44:05) [GET]
+
+ActionController::RoutingError (No route matches "/photo/image/39/small/aaaaaaaa1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-19 19:44:06) [GET]
+
+ActionController::RoutingError (No route matches "/photo/image/32/small/yameiyameiyameiyameiyameiyameiyameiyamei.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-19 19:44:06) [GET]
+
+ActionController::RoutingError (No route matches "/photo/image/28/small/yameiyameidadiyameiyameiyameiyameiyamei.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-19 19:44:06) [GET]
+
+ActionController::RoutingError (No route matches "/photo/image/27/small/yameiyameiChrissyLyameiSandyMyamei.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-19 19:44:07) [GET]
+
+ActionController::RoutingError (No route matches "/photo/image/26/small/yameiyameiyameiyameiyameiyameiyameiyameiyamei.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-19 19:44:07) [GET]
+
+ActionController::RoutingError (No route matches "/photo/image/25/small/yameiyameiyameiyameiyameiyameiyameiyameiyameiyamei.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-19 19:44:08) [GET]
+
+ActionController::RoutingError (No route matches "/js/img/fcurrent.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#show (for 127.0.0.1 at 2009-12-19 19:44:08) [GET]
+  Parameters: {"id"=>"50-"}
+  [4;36;1mItem Columns (7.0ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (5.0ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 50) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mselect * from photos where table_name = 'items' and parent_id = 50[0m
+  [4;35;1mTag Load (153.0ms)[0m   [0mSELECT tags.id, tags.name, COUNT(*) AS count FROM `tags` INNER JOIN taggings ON tags.id = taggings.tag_id INNER JOIN items ON items.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Item') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+Rendering template within layouts/application
+Rendering items/show
+  [4;36;1mTagging Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `taggings`[0m
+  [4;35;1mTag Load (20.0ms)[0m   [0mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.id = `taggings`.tag_id WHERE ((`taggings`.taggable_type = 'Item') AND (`taggings`.taggable_id = 50)) [0m
+  [4;36;1mTag Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `tags`[0m
+Rendered items/_front_show (609.0ms)
+Rendered layouts/_header (0.0ms)
+  [4;35;1mProject Load (0.0ms)[0m   [0mSELECT * FROM `projects` WHERE (cn_name like '实用工具') LIMIT 1[0m
+  [4;36;1mProject Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `projects`[0m
+  [4;35;1mItem Load (3.0ms)[0m   [0mSELECT * FROM `items` WHERE (project_id = 31) ORDER BY created_at DESC LIMIT 12[0m
+  [4;36;1mItem Load (61.0ms)[0m   [0;1mSELECT * FROM `items` ORDER BY created_at DESC LIMIT 12[0m
+DEPRECATION WARNING: String#chars has been deprecated in favor of String#mb_chars.. (called from _run_erb_app47views47layouts47_sidebar_detail46html46erb_locals_object_sidebar_detail at C:/Users/ken/Documents/NetBeansProjects/yamei/app/views/layouts/_sidebar_detail.html.erb:60)
+DEPRECATION WARNING: String#chars has been deprecated in favor of String#mb_chars.. (called from _run_erb_app47views47layouts47_sidebar_detail46html46erb_locals_object_sidebar_detail at C:/Users/ken/Documents/NetBeansProjects/yamei/app/views/layouts/_sidebar_detail.html.erb:60)
+DEPRECATION WARNING: String#chars has been deprecated in favor of String#mb_chars.. (called from _run_erb_app47views47layouts47_sidebar_detail46html46erb_locals_object_sidebar_detail at C:/Users/ken/Documents/NetBeansProjects/yamei/app/views/layouts/_sidebar_detail.html.erb:60)
+DEPRECATION WARNING: String#chars has been deprecated in favor of String#mb_chars.. (called from _run_erb_app47views47layouts47_sidebar_detail46html46erb_locals_object_sidebar_detail at C:/Users/ken/Documents/NetBeansProjects/yamei/app/views/layouts/_sidebar_detail.html.erb:60)
+DEPRECATION WARNING: String#chars has been deprecated in favor of String#mb_chars.. (called from _run_erb_app47views47layouts47_sidebar_detail46html46erb_locals_object_sidebar_detail at C:/Users/ken/Documents/NetBeansProjects/yamei/app/views/layouts/_sidebar_detail.html.erb:60)
+DEPRECATION WARNING: String#chars has been deprecated in favor of String#mb_chars.. (called from _run_erb_app47views47layouts47_sidebar_detail46html46erb_locals_object_sidebar_detail at C:/Users/ken/Documents/NetBeansProjects/yamei/app/views/layouts/_sidebar_detail.html.erb:60)
+DEPRECATION WARNING: String#chars has been deprecated in favor of String#mb_chars.. (called from _run_erb_app47views47layouts47_sidebar_detail46html46erb_locals_object_sidebar_detail at C:/Users/ken/Documents/NetBeansProjects/yamei/app/views/layouts/_sidebar_detail.html.erb:60)
+DEPRECATION WARNING: String#chars has been deprecated in favor of String#mb_chars.. (called from _run_erb_app47views47layouts47_sidebar_detail46html46erb_locals_object_sidebar_detail at C:/Users/ken/Documents/NetBeansProjects/yamei/app/views/layouts/_sidebar_detail.html.erb:60)
+DEPRECATION WARNING: String#chars has been deprecated in favor of String#mb_chars.. (called from _run_erb_app47views47layouts47_sidebar_detail46html46erb_locals_object_sidebar_detail at C:/Users/ken/Documents/NetBeansProjects/yamei/app/views/layouts/_sidebar_detail.html.erb:60)
+DEPRECATION WARNING: String#chars has been deprecated in favor of String#mb_chars.. (called from _run_erb_app47views47layouts47_sidebar_detail46html46erb_locals_object_sidebar_detail at C:/Users/ken/Documents/NetBeansProjects/yamei/app/views/layouts/_sidebar_detail.html.erb:60)
+DEPRECATION WARNING: String#chars has been deprecated in favor of String#mb_chars.. (called from _run_erb_app47views47layouts47_sidebar_detail46html46erb_locals_object_sidebar_detail at C:/Users/ken/Documents/NetBeansProjects/yamei/app/views/layouts/_sidebar_detail.html.erb:60)
+DEPRECATION WARNING: String#chars has been deprecated in favor of String#mb_chars.. (called from _run_erb_app47views47layouts47_sidebar_detail46html46erb_locals_object_sidebar_detail at C:/Users/ken/Documents/NetBeansProjects/yamei/app/views/layouts/_sidebar_detail.html.erb:60)
+Rendered layouts/_sidebar_detail (155.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 1147ms (View: 702, DB: 262) | 200 OK [http://127.0.0.1/items/50-]

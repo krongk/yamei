@@ -1,0 +1,17 @@
+<div id="niftys" class="niftys">
+	<h3 class="niftys_h3">图片详细<span class="niftys_right">
+    <%= link_to '编辑', edit_photo_path(@photo) %>|
+    <%= link_to '删除', @photo, :confirm => '确定要删除吗?',:method=>'delete' %>|
+    <%= link_to '返回' %></span>
+    </h3>
+</div>
+<p>
+  <b>表名:</b>
+  <%=h @photo.table_name %>
+  <br/>
+   <%=h @photo.title %><br/>
+</p>
+<hr/>
+<p>
+<%= image_tag url_for_file_column('photo' ,'image') %>
+</p>
