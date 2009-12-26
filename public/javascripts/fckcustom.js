@@ -34,7 +34,7 @@ FCKConfig.ToolbarSets["Base"] = [
 ['FontName','FontSize','TextColor','BGColor',
 'Bold','Italic','Underline','StrikeThrough',  
 'JustifyLeft','JustifyCenter','JustifyRight','JustifyFull', 
-'Link','Unlink','Image','Table']
+'Link','Unlink','Table']
 ] ;
 
 FCKConfig.ToolbarSets["None"] = [ 

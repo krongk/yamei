@@ -67,19 +67,14 @@
 
 <div id="sidebar_n2" class="sidebar">
   <div class="sidebar_title">
-    <h2><%=Album.last.title%></h2>
+    <h2>sdfsdf</h2>
   </div>
   <div class="sidebar_body1">
     <ul class="album">
-      <% @album_photos = AlbumPhoto.find(:all,:conditions=>["album_id = ?",Album.last],:limit=>10,:order=>"created_at desc") -%>
-      <%  @album_photos.each do |al_photo| -%>
-        <% @photo = Photo.find(:first,:conditions=>["id =?",al_photo.photo_id]) -%>
-        <% if @photo -%>
+    
         <li>
-          <%=link_to image_tag(url_for_file_column('photo' ,'image','small'),:alt=>@photo.title),"/picture?id=#{@photo.id}"%>
+         afd
         </li>
-       <% end  -%>
-    <% end  -%>
     </ul>
   </div>
 </div>
@@ -96,19 +91,11 @@
 
 <div id="sidebar_n3" class="sidebar">
   <div class="sidebar_title">
-    <h2><%=Album.first.title%></h2>
+    <h2>wefwefwef</h2>
   </div>
   <div class="sidebar_body1">
     <ul class="album">
-      <% @album_photos = AlbumPhoto.find(:all,:conditions=>["album_id = ?",Album.first],:limit=>6,:order=>"created_at desc") -%>
-      <%  @album_photos.each do |al_photo| -%>
-        <% @photo = Photo.find(:first,:conditions=>["id =?",al_photo.photo_id]) -%>
-        <% if @photo -%>
-        <li>
-          <%=link_to image_tag(url_for_file_column('photo' ,'image','small'),:alt=>@photo.title),"/picture?id=#{@photo.id}"%>
-        </li>
-       <% end  -%>
-    <% end  -%>
+     <li>sdfsd</li>
     </ul>
   </div>
 </div>

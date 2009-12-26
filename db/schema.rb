@@ -9,22 +9,8 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090827150935) do
+ActiveRecord::Schema.define(:version => 20091220013610) do
 
-  create_table "album_photos", :force => true do |t|
-    t.integer  "album_id"
-    t.integer  "photo_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "albums", :force => true do |t|
-    t.string   "title"
-    t.boolean  "display"
-    t.integer  "sort_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "anotes", :force => true do |t|
     t.string   "name"
@@ -175,17 +161,6 @@ ActiveRecord::Schema.define(:version => 20090827150935) do
     t.datetime "updated_at"
     t.string   "remember_token"
     t.datetime "remember_token_expires_at"
-  end
-
-  create_table "photos", :force => true do |t|
-    t.string   "table_name"
-    t.integer  "parent_id"
-    t.string   "title"
-    t.string   "image"
-    t.boolean  "is_lock"
-    t.boolean  "is_display"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "projects", :force => true do |t|

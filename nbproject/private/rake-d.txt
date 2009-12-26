@@ -42,6 +42,7 @@ doc\:plugins=Generate documentation for all installed plugins
 doc\:plugins\:acts_as_nice_url-2.0.1=Generate documentation for the acts_as_nice_url-2.0.1 plugin
 doc\:plugins\:acts_as_taggable_on_steroids=Generate documentation for the acts_as_taggable_on_steroids plugin
 doc\:plugins\:acts_as_tree=Generate documentation for the acts_as_tree plugin
+doc\:plugins\:attachment_fu=Generate documentation for the attachment_fu plugin
 doc\:plugins\:easy_search=Generate documentation for the easy_search plugin
 doc\:plugins\:fckeditor=Generate documentation for the fckeditor plugin
 doc\:plugins\:file_column=Generate documentation for the file_column plugin

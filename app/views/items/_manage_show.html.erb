@@ -17,9 +17,6 @@
        <span style="overflow:auto;margin:0px;padding:0px;">2009年08月11日09:33</span>
     </div>
     <div id="new_body">
-        <% @photos.each do |photo| %>
-		  <div style="float:left;margin:10px;"><%= image_tag url_for_file_column(photo ,'image','thumb') %></div>
-       <% end %>
        <%= @item.info %>
    </div>
    <div class="menu">

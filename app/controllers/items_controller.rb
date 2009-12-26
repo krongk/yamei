@@ -9,7 +9,6 @@ class ItemsController < ApplicationController
 			@items = Item.paginate :page =>params[:page]||1, :per_page =>30,:order=>"sort_id desc,updated_at DESC"
       tag_cloud
       
-      @photo = Photo.new
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @items }
@@ -20,7 +19,7 @@ class ItemsController < ApplicationController
   # GET /items/1.xml
   def show
     @item = Item.find(params[:id])
-		@photos = Photo.find_by_sql("select * from photos where table_name = 'items' and parent_id = #{@item.id}")
+		
     tag_cloud
     
     respond_to do |format|

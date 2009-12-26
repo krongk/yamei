@@ -3,7 +3,7 @@ development:
   adapter: mysql
   encoding: utf8
   reconnect: false
-  database: yamei
+  database: kenrome_yamei
   pool: 5
   username: root
   password: kenrome

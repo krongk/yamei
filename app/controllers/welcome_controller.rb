@@ -121,11 +121,6 @@ class WelcomeController < ApplicationController
   end
   # display photo
   def picture
-    # @album_photos = AlbumPhoto.paginate :page=>params[:page]||1, :per_page=>9, :order=>"created_at desc"
-    @picture = Photo.find(params[:id]||Photo.first)
-    @arr =[]
-    album_photo = AlbumPhoto.find_by_photo_id(@picture.id)
-    @album_photos = AlbumPhoto.paginate :page=>params[:page]||1, :per_page=>9,:conditions=>"album_id = #{album_photo.album_id}",:order=>'created_at desc'
- 
+
   end
 end
